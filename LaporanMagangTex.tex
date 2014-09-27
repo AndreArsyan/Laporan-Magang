@@ -1,0 +1,43 @@
+\documentclass[12pt]{report}
+%package list
+\usepackage{graphicx} %buat insert gambar
+\usepackage{times} %font yg dipake times new roman
+\usepackage{datetime} %buat format date
+\newdateformat{mydateformat}{\THEDAY\ \monthname\ \THEYEAR}
+\usepackage{hyperref} %buat link di toc
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+} %implementasi hyperref
+\begin{document}
+\title{\textbf{Laporan Magang\\ %textbf buat bold
+Pengembangan Website GCS \\
+ Pada PT ACNielsen Indonesia}}
+\author{
+\includegraphics[width=3in]{img/logo-ub.jpg}\\[1ex]
+Andre Arsyan Jordie\\
+1112001029\\[8ex] %8ex buat spasi
+\textbf{PROGRAM STUDI TEKNIK INFORMATIKA}\\
+\textbf{FAKULTAS TEKNIK DAN ILMU KOMPUTER}\\
+\textbf{UNIVERSITAS BAKRIE}\\
+\textbf{JAKARTA}\\
+\textbf{2014}
+}
+\date{} %buat ngilangin tanggal
+\maketitle %buat apply halaman cover
+
+\pagenumbering{roman} %numbering pake angka romawi
+\include{HalamanPengesahan} 
+\include{KataPengantar}
+
+\tableofcontents %generate daftar isi masbro
+
+%----------------------------Mulai halaman biasa-----------------------------------------
+\cleardoublepage\pagenumbering{arabic} %ini buat mulai numbering pake angka biasa
+\include{Bab1}
+\include{Bab2}
+\include{Bab3}
+\end{document}
